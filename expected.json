@@ -1,0 +1,711 @@
+[
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "10",
+   "11"
+  ],
+  "expected": "103 items at 10 per page fill 11 pages. The last page holds 3 items. Page 11 shows items 101 to 103 (OFFSET 100, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "10",
+   "1"
+  ],
+  "expected": "103 items at 10 per page fill 11 pages. The last page holds 3 items. Page 1 shows items 1 to 10 (OFFSET 0, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "100",
+   "10",
+   "10"
+  ],
+  "expected": "100 items at 10 per page fill 10 pages. The last page is full. Page 10 shows items 91 to 100 (OFFSET 90, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "100",
+   "10",
+   "5"
+  ],
+  "expected": "100 items at 10 per page fill 10 pages. The last page is full. Page 5 shows items 41 to 50 (OFFSET 40, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "1",
+   "10",
+   "1"
+  ],
+  "expected": "1 item at 10 per page fill 1 page. The last page holds 1 item. Page 1 shows item 1 (OFFSET 0, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "10",
+   "10",
+   "1"
+  ],
+  "expected": "10 items at 10 per page fill 1 page. The last page is full. Page 1 shows items 1 to 10 (OFFSET 0, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "11",
+   "10",
+   "2"
+  ],
+  "expected": "11 items at 10 per page fill 2 pages. The last page holds 1 item. Page 2 shows item 11 (OFFSET 10, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "0",
+   "10",
+   "1"
+  ],
+  "expected": "With 0 items there are no pages, so there is nothing to show."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "5",
+   "1",
+   "5"
+  ],
+  "expected": "5 items at 1 per page fill 5 pages. The last page is full. Page 5 shows item 5 (OFFSET 4, LIMIT 1)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "5",
+   "1",
+   "1"
+  ],
+  "expected": "5 items at 1 per page fill 5 pages. The last page is full. Page 1 shows item 1 (OFFSET 0, LIMIT 1)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "7",
+   "3",
+   "3"
+  ],
+  "expected": "7 items at 3 per page fill 3 pages. The last page holds 1 item. Page 3 shows item 7 (OFFSET 6, LIMIT 3)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "7",
+   "3",
+   "2"
+  ],
+  "expected": "7 items at 3 per page fill 3 pages. The last page holds 1 item. Page 2 shows items 4 to 6 (OFFSET 3, LIMIT 3)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "19",
+   "10",
+   "2"
+  ],
+  "expected": "19 items at 10 per page fill 2 pages. The last page holds 9 items. Page 2 shows items 11 to 19 (OFFSET 10, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "20000",
+   "7",
+   "2858"
+  ],
+  "expected": "20000 items at 7 per page fill 2858 pages. The last page holds 1 item. Page 2858 shows item 20000 (OFFSET 19999, LIMIT 7)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "20001",
+   "20000",
+   "2"
+  ],
+  "expected": "20001 items at 20000 per page fill 2 pages. The last page holds 1 item. Page 2 shows item 20001 (OFFSET 20000, LIMIT 20000)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "1000000000",
+   "1000000",
+   "1000"
+  ],
+  "expected": "1000000000 items at 1000000 per page fill 1000 pages. The last page is full. Page 1000 shows items 999000001 to 1000000000 (OFFSET 999000000, LIMIT 1000000)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "1000000000",
+   "1",
+   "1000000000"
+  ],
+  "expected": "1000000000 items at 1 per page fill 1000000000 pages. The last page is full. Page 1000000000 shows item 1000000000 (OFFSET 999999999, LIMIT 1)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "999999999",
+   "1000000",
+   "1000"
+  ],
+  "expected": "999999999 items at 1000000 per page fill 1000 pages. The last page holds 999999 items. Page 1000 shows items 999000001 to 999999999 (OFFSET 999000000, LIMIT 1000000)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "30000",
+   "7",
+   "4286"
+  ],
+  "expected": "30000 items at 7 per page fill 4286 pages. The last page holds 5 items. Page 4286 shows items 29996 to 30000 (OFFSET 29995, LIMIT 7)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "30001",
+   "7",
+   "4286"
+  ],
+  "expected": "30001 items at 7 per page fill 4286 pages. The last page holds 6 items. Page 4286 shows items 29996 to 30001 (OFFSET 29995, LIMIT 7)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   " 103 ",
+   " 10 ",
+   " 11 "
+  ],
+  "expected": "103 items at 10 per page fill 11 pages. The last page holds 3 items. Page 11 shows items 101 to 103 (OFFSET 100, LIMIT 10)."
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "10",
+   "12"
+  ],
+  "expected": "ERR:the page number must be a whole number from 1 to 11"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "10",
+   "0"
+  ],
+  "expected": "ERR:the page number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "0",
+   "1"
+  ],
+  "expected": "ERR:the page size must be a whole number from 1 to 1000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "1000001",
+   "1"
+  ],
+  "expected": "ERR:the page size must be a whole number from 1 to 1000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "1000000001",
+   "10",
+   "1"
+  ],
+  "expected": "ERR:the item count must be a whole number from 0 to 1000000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "x",
+   "10",
+   "1"
+  ],
+  "expected": "ERR:the item count must be a whole number from 0 to 1000000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "103",
+   "10",
+   ""
+  ],
+  "expected": "ERR:the page number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "-5",
+   "10",
+   "1"
+  ],
+  "expected": "ERR:the item count must be a whole number from 0 to 1000000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "0",
+   "0",
+   "1"
+  ],
+  "expected": "ERR:the page size must be a whole number from 1 to 1000000"
+ },
+ {
+  "fn": "pageTruth",
+  "args": [
+   "10.5",
+   "10",
+   "1"
+  ],
+  "expected": "ERR:the item count must be a whole number from 0 to 1000000000"
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "1",
+   "10"
+  ],
+  "expected": "Item 1 at 10 per page is on page 1, number 1 on that page. Its zero-based index is 0 and that page starts at OFFSET 0."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "10",
+   "10"
+  ],
+  "expected": "Item 10 at 10 per page is on page 1, number 10 on that page. Its zero-based index is 9 and that page starts at OFFSET 0."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "11",
+   "10"
+  ],
+  "expected": "Item 11 at 10 per page is on page 2, number 1 on that page. Its zero-based index is 10 and that page starts at OFFSET 10."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "95",
+   "10"
+  ],
+  "expected": "Item 95 at 10 per page is on page 10, number 5 on that page. Its zero-based index is 94 and that page starts at OFFSET 90."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "100",
+   "10"
+  ],
+  "expected": "Item 100 at 10 per page is on page 10, number 10 on that page. Its zero-based index is 99 and that page starts at OFFSET 90."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "101",
+   "10"
+  ],
+  "expected": "Item 101 at 10 per page is on page 11, number 1 on that page. Its zero-based index is 100 and that page starts at OFFSET 100."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "1",
+   "1"
+  ],
+  "expected": "Item 1 at 1 per page is on page 1, number 1 on that page. Its zero-based index is 0 and that page starts at OFFSET 0."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "57",
+   "1"
+  ],
+  "expected": "Item 57 at 1 per page is on page 57, number 1 on that page. Its zero-based index is 56 and that page starts at OFFSET 56."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "57",
+   "57"
+  ],
+  "expected": "Item 57 at 57 per page is on page 1, number 57 on that page. Its zero-based index is 56 and that page starts at OFFSET 0."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "58",
+   "57"
+  ],
+  "expected": "Item 58 at 57 per page is on page 2, number 1 on that page. Its zero-based index is 57 and that page starts at OFFSET 57."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "20000",
+   "7"
+  ],
+  "expected": "Item 20000 at 7 per page is on page 2858, number 1 on that page. Its zero-based index is 19999 and that page starts at OFFSET 19999."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "20001",
+   "7"
+  ],
+  "expected": "Item 20001 at 7 per page is on page 2858, number 2 on that page. Its zero-based index is 20000 and that page starts at OFFSET 19999."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "1000000000",
+   "1000000"
+  ],
+  "expected": "Item 1000000000 at 1000000 per page is on page 1000, number 1000000 on that page. Its zero-based index is 999999999 and that page starts at OFFSET 999000000."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "1000000000",
+   "7"
+  ],
+  "expected": "Item 1000000000 at 7 per page is on page 142857143, number 6 on that page. Its zero-based index is 999999999 and that page starts at OFFSET 999999994."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "999999",
+   "1000000"
+  ],
+  "expected": "Item 999999 at 1000000 per page is on page 1, number 999999 on that page. Its zero-based index is 999998 and that page starts at OFFSET 0."
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "0",
+   "10"
+  ],
+  "expected": "ERR:the item number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "5",
+   "0"
+  ],
+  "expected": "ERR:the page size must be a whole number from 1 to 1000000"
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "x",
+   "10"
+  ],
+  "expected": "ERR:the item number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "1000000001",
+   "10"
+  ],
+  "expected": "ERR:the item number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "locateTruth",
+  "args": [
+   "5",
+   ""
+  ],
+  "expected": "ERR:the page size must be a whole number from 1 to 1000000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "11",
+   "20",
+   "5"
+  ],
+  "expected": "On page 11 of 20, a window of 5 links covers pages 9 to 13. A separate link to page 1 is needed. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "1",
+   "20",
+   "5"
+  ],
+  "expected": "On page 1 of 20, a window of 5 links covers pages 1 to 5. Page 1 is already in the window. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "20",
+   "20",
+   "5"
+  ],
+  "expected": "On page 20 of 20, a window of 5 links covers pages 16 to 20. A separate link to page 1 is needed. Page 20 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "2",
+   "20",
+   "5"
+  ],
+  "expected": "On page 2 of 20, a window of 5 links covers pages 1 to 5. Page 1 is already in the window. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "19",
+   "20",
+   "5"
+  ],
+  "expected": "On page 19 of 20, a window of 5 links covers pages 16 to 20. A separate link to page 1 is needed. Page 20 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "3",
+   "20",
+   "5"
+  ],
+  "expected": "On page 3 of 20, a window of 5 links covers pages 1 to 5. Page 1 is already in the window. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "18",
+   "20",
+   "5"
+  ],
+  "expected": "On page 18 of 20, a window of 5 links covers pages 16 to 20. A separate link to page 1 is needed. Page 20 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "10",
+   "20",
+   "4"
+  ],
+  "expected": "On page 10 of 20, a window of 4 links covers pages 8 to 11. A separate link to page 1 is needed. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "10",
+   "20",
+   "1"
+  ],
+  "expected": "On page 10 of 20, a window of 1 link covers page 10. A separate link to page 1 is needed. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "1",
+   "1",
+   "5"
+  ],
+  "expected": "On page 1 of 1, a window of 5 links covers page 1. Page 1 is already in the window. Page 1 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "2",
+   "3",
+   "10"
+  ],
+  "expected": "On page 2 of 3, a window of 10 links covers pages 1 to 3. Page 1 is already in the window. Page 3 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "3",
+   "5",
+   "5"
+  ],
+  "expected": "On page 3 of 5, a window of 5 links covers pages 1 to 5. Page 1 is already in the window. Page 5 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "4",
+   "5",
+   "3"
+  ],
+  "expected": "On page 4 of 5, a window of 3 links covers pages 3 to 5. A separate link to page 1 is needed. Page 5 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "1",
+   "5",
+   "5"
+  ],
+  "expected": "On page 1 of 5, a window of 5 links covers pages 1 to 5. Page 1 is already in the window. Page 5 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "500",
+   "1000",
+   "1000"
+  ],
+  "expected": "On page 500 of 1000, a window of 1000 links covers pages 1 to 1000. Page 1 is already in the window. Page 1000 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "500",
+   "1000",
+   "999"
+  ],
+  "expected": "On page 500 of 1000, a window of 999 links covers pages 1 to 999. Page 1 is already in the window. A separate link to page 1000 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "500000000",
+   "1000000000",
+   "7"
+  ],
+  "expected": "On page 500000000 of 1000000000, a window of 7 links covers pages 499999997 to 500000003. A separate link to page 1 is needed. A separate link to page 1000000000 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "1",
+   "1000000000",
+   "7"
+  ],
+  "expected": "On page 1 of 1000000000, a window of 7 links covers pages 1 to 7. Page 1 is already in the window. A separate link to page 1000000000 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "1000000000",
+   "1000000000",
+   "7"
+  ],
+  "expected": "On page 1000000000 of 1000000000, a window of 7 links covers pages 999999994 to 1000000000. A separate link to page 1 is needed. Page 1000000000 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "2999",
+   "3000",
+   "2"
+  ],
+  "expected": "On page 2999 of 3000, a window of 2 links covers pages 2998 to 2999. A separate link to page 1 is needed. A separate link to page 3000 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "5",
+   "3500",
+   "10"
+  ],
+  "expected": "On page 5 of 3500, a window of 10 links covers pages 1 to 10. Page 1 is already in the window. A separate link to page 3500 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "3500",
+   "3500",
+   "10"
+  ],
+  "expected": "On page 3500 of 3500, a window of 10 links covers pages 3491 to 3500. A separate link to page 1 is needed. Page 3500 is already in the window."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   " 11 ",
+   " 20 ",
+   " 5 "
+  ],
+  "expected": "On page 11 of 20, a window of 5 links covers pages 9 to 13. A separate link to page 1 is needed. A separate link to page 20 is needed."
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "21",
+   "20",
+   "5"
+  ],
+  "expected": "ERR:the current page must be a whole number from 1 to 20"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "0",
+   "20",
+   "5"
+  ],
+  "expected": "ERR:the page number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "5",
+   "0",
+   "5"
+  ],
+  "expected": "ERR:the page count must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "5",
+   "20",
+   "0"
+  ],
+  "expected": "ERR:the window width must be a whole number from 1 to 1000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "5",
+   "20",
+   "1001"
+  ],
+  "expected": "ERR:the window width must be a whole number from 1 to 1000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "x",
+   "20",
+   "5"
+  ],
+  "expected": "ERR:the page number must be a whole number from 1 to 1000000000"
+ },
+ {
+  "fn": "windowTruth",
+  "args": [
+   "5",
+   "",
+   "5"
+  ],
+  "expected": "ERR:the page count must be a whole number from 1 to 1000000000"
+ }
+]
