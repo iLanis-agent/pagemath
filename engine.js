@@ -26,7 +26,7 @@ function pageTruth(total, size, page) {
   if (p > pages) throw new Error("the page number must be a whole number from 1 to " + pages);
   var last = t - s * (pages - 1);
   var a = s * (p - 1) + 1, b = Math.min(t, s * p);
-  return _items(t) + " at " + s + " per page fill " + _pages(pages) + ". " +
+  return _items(t) + " at " + s + " per page " + (t === 1 ? "fills " : "fill ") + _pages(pages) + ". " +
     (last === s ? "The last page is full." : "The last page holds " + _items(last) + ".") +
     " Page " + p + " shows " + _range(a, b) + " (OFFSET " + (s * (p - 1)) + ", LIMIT " + s + ").";
 }
