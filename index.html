@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Math - pagination arithmetic</title>
+<style>
+  :root { --accent:#3b5ba5; --ink:#0f1c38; --paper:#f1f5fc; --soft:#dde7f8; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#4a679e; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Page Math</h1>
+  <p class="lede">103 items at 10 per page fill 11 pages, and the last page holds only 3.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    Page Math does whole-number pagination arithmetic on the numbers you type. It does not know how any real database, API or website pages its results, and it gives no verdict on whether your paging is right or fast. Every figure is your own entry.
+  </div>
+  <section>
+    <h2>The page truth</h2>
+    <p>103 items at 10 per page fill 11 pages. The last page holds 3 items. Page 11 shows items 101 to 103 (OFFSET 100, LIMIT 10).</p>
+  </section>
+  <section>
+    <h2>The locate truth</h2>
+    <p>Item 101 at 10 per page is on page 11, number 1 on that page. Its zero-based index is 100 and that page starts at OFFSET 100.</p>
+  </section>
+  <section>
+    <h2>The window truth</h2>
+    <p>On page 11 of 20, a window of 5 links covers pages 9 to 13. A separate link to page 1 is needed. A separate link to page 20 is needed.</p>
+  </section>
+  <a class="btn" href="app.html">Run your numbers</a>
+  <footer>Page Math is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
