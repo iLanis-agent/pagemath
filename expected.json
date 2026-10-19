@@ -42,7 +42,7 @@
    "10",
    "1"
   ],
-  "expected": "1 item at 10 per page fill 1 page. The last page holds 1 item. Page 1 shows item 1 (OFFSET 0, LIMIT 10)."
+  "expected": "1 item at 10 per page fills 1 page. The last page holds 1 item. Page 1 shows item 1 (OFFSET 0, LIMIT 10)."
  },
  {
   "fn": "pageTruth",
