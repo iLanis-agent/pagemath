@@ -35,7 +35,7 @@ def page_truth(total, size, page):
         a = (p - 1) * s + 1; b = min(t, p * s)
     rng = f"item {a}" if a == b else f"items {a} to {b}"
     lastsent = "The last page is full." if last == s else f"The last page holds {plural(last, 'item', 'items')}."
-    return f"{plural(t, 'item', 'items')} at {s} per page fill {plural(pages, 'page', 'pages')}. {lastsent} Page {p} shows {rng} (OFFSET {(p - 1) * s}, LIMIT {s})."
+    return f"{plural(t, 'item', 'items')} at {s} per page {"fills" if t == 1 else "fill"} {plural(pages, 'page', 'pages')}. {lastsent} Page {p} shows {rng} (OFFSET {(p - 1) * s}, LIMIT {s})."
 
 def locate(item, size):
     k = num(item, 1, 10**9, ITEM_ERR); s = num(size, 1, 10**6, SIZE_ERR)
